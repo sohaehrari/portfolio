@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const projects = [
   {
@@ -8,8 +9,9 @@ const projects = [
     description:
       "A modern opportunity platform designed to help users discover jobs, internships, scholarships, courses, remote work, and other career opportunities.",
     technologies: ["Next.js", "React.js", "JavaScript", "Prisma"],
+    image: "/projects/home.webp",
     github: "https://github.com/sohaehrari/final-pro",
-    live: null,
+    live: "https://final-pro-cc8k.vercel.app/",
   },
 
   {
@@ -19,19 +21,21 @@ const projects = [
     description:
       "A goal-management application where users can create, edit, delete, search, and filter goals while tracking their progress and achievements.",
     technologies: ["React.js", "JavaScript", "Material UI"],
+    image: "/projects/cart.webp",
     github: "https://github.com/sohaehrari/week6",
-    live: null,
+    live: "https://week6-wheat.vercel.app/",
   },
 
   {
     number: "03",
-    title: "World Explorer",
+    title: "E-commerce",
     category: "Countries Explorer",
     description:
       "An interactive country exploration application that allows users to explore countries and discover useful information through a responsive interface.",
     technologies: ["React.js", "JavaScript", "REST API", "CSS"],
-    github: "https://github.com/sohaehrari/world-explorer",
-    live: null,
+    image: "/projects/product.webp",
+    github: "https://github.com/sohaehrari/commerse",
+    live: "https://commerse-ahq7.vercel.app/",
   },
 
   {
@@ -41,8 +45,9 @@ const projects = [
     description:
       "A movie watchlist manager designed to help users organize movies they want to watch through a clean and responsive interface.",
     technologies: ["React.js", "JavaScript", "CSS"],
+    image: "/projects/movie.webp",
     github: "https://github.com/sohaehrari/movie-watchlist",
-    live: null,
+    live: "https://movie-watchlist-beta-dusky.vercel.app/",
   },
 
   {
@@ -52,20 +57,24 @@ const projects = [
     description:
       "A responsive educational web application with reusable components and interactive interfaces focused on creating a simple learning experience.",
     technologies: ["React.js", "JavaScript", "Bootstrap"],
-    github: null,
+    image: "/projects/pocket.webp",
+    github: "",
     live: "https://sohaehrari.github.io/pocket-classroom/",
   },
 
+
   {
     number: "06",
-    title: "Product",
-    category: "Product Application",
+    title: "Life_Os",
+    category: "Educational Platform",
     description:
-      "A frontend web project focused on presenting and working with products through a modern and responsive user interface.",
-    technologies: ["React.js", "JavaScript", "CSS"],
-    github: "https://github.com/sohaehrari/product",
-    live: null,
-  },
+      "A responsive educational web application with reusable components and interactive interfaces focused on creating a simple learning experience.",
+    technologies: ["React.js", "JavaScript", "Bootstrap"],
+    image: "/projects/life.webp",
+      github: "https://github.com/sohaehrari/life_os",
+      live: "https://life-os-nine-mauve.vercel.app/",
+    },
+
 ];
 
 export default function ProjectsPage() {
@@ -107,13 +116,27 @@ export default function ProjectsPage() {
           {projects.map((project, index) => (
             <article
               key={project.title}
-              className="group relative flex min-h-[430px] flex-col overflow-hidden rounded-2xl border border-white/[0.07] bg-[#0c0c10] p-5 opacity-0 transition-all duration-500 hover:-translate-y-2 hover:border-violet-400/20 hover:shadow-2xl hover:shadow-violet-950/20 animate-[fadeUp_0.6s_ease-out_forwards] sm:rounded-[24px] sm:p-7"
+              className="group relative flex min-h-[500px] flex-col overflow-hidden rounded-2xl border border-white/[0.07] bg-[#0c0c10] p-5 opacity-0 transition-all duration-500 hover:-translate-y-2 hover:border-violet-400/20 hover:shadow-2xl hover:shadow-violet-950/20 animate-[fadeUp_0.6s_ease-out_forwards] sm:rounded-[24px] sm:p-7"
               style={{
                 animationDelay: `${index * 100}ms`,
               }}
             >
               {/* Glow */}
               <div className="pointer-events-none absolute -right-24 -top-24 h-48 w-48 rounded-full bg-violet-500/5 blur-[80px] transition-all duration-500 group-hover:bg-violet-500/15" />
+
+              {/* Project Image */}
+              <div className="relative mb-6 overflow-hidden rounded-xl border border-white/[0.07] bg-zinc-900">
+                <Image
+                  src={project.image}
+                  alt={`${project.title} project screenshot`}
+                  width={1200}
+                  height={700}
+                  className="h-48 w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+
+                {/* Image Overlay */}
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+              </div>
 
               {/* Number + Category */}
               <div className="relative flex items-center justify-between gap-3">
@@ -127,7 +150,7 @@ export default function ProjectsPage() {
               </div>
 
               {/* Content */}
-              <div className="relative mt-10 flex-1">
+              <div className="relative mt-6 flex-1">
                 <h2 className="text-2xl font-bold tracking-[-0.03em] transition-colors duration-300 group-hover:text-violet-300 sm:text-3xl">
                   {project.title}
                 </h2>
