@@ -52,14 +52,13 @@ const projects = [
 
   {
     number: "05",
-    title: "Pocket Classroom",
+    title: "Skyora(weather_dashboard)",
     category: "Educational Platform",
-    description:
-      "A responsive educational web application with reusable components and interactive interfaces focused on creating a simple learning experience.",
-    technologies: ["React.js", "JavaScript", "Bootstrap"],
-    image: "/projects/pocket.webp",
-    github: "",
-    live: "https://sohaehrari.github.io/pocket-classroom/",
+    description:"A responsive weather dashboard built with Next.js, featuring real-time weather data, location-based forecasts, user authentication, and a clean, interactive interface for a simple and personalized weather experience.",
+    technologies: ["Next.js", "JavaScript", "tailwindcss"],
+    image: "/projects/logout.webp",
+    github: "https://github.com/sohaehrari/skyora",
+    live: "https://skyora-hh6q.vercel.app/",
   },
 
 
