@@ -14,44 +14,25 @@ const projects = [
     live: "https://final-pro-cc8k.vercel.app/",
   },
 
-  {
+ 
+{
     number: "02",
-    title: "Goal Tracker",
-    category: "Productivity Application",
-    description:
-      "A goal-management application where users can create, edit, delete, search, and filter goals while tracking their progress and achievements.",
-    technologies: ["React.js", "JavaScript", "Material UI"],
-    image: "/projects/cart.webp",
-    github: "https://github.com/sohaehrari/week6",
-    live: "https://week6-wheat.vercel.app/",
+    title: "NovaCalc(Calculator platform)",
+    category: "Mathematic platform",
+    description:"A responsive weather dashboard built with Next.js, featuring real-time weather data, location-based forecasts, user authentication, and a clean, interactive interface for a simple and personalized weather experience.",
+    technologies: ["Next.js", "JavaScript", "tailwindcss"],
+    image: "/projects/calculation.webp",
+    github: "https://github.com/sohaehrari/novacalc",
+    live: "https://sohaehrari-novacalc.vercel.app/",
   },
+
+
+  
+
+ 
 
   {
     number: "03",
-    title: "E-commerce",
-    category: "Countries Explorer",
-    description:
-      "An interactive country exploration application that allows users to explore countries and discover useful information through a responsive interface.",
-    technologies: ["React.js", "JavaScript", "REST API", "CSS"],
-    image: "/projects/product.webp",
-    github: "https://github.com/sohaehrari/commerse",
-    live: "https://commerse-ahq7.vercel.app/",
-  },
-
-  {
-    number: "04",
-    title: "Movie Watchlist",
-    category: "Movie Management",
-    description:
-      "A movie watchlist manager designed to help users organize movies they want to watch through a clean and responsive interface.",
-    technologies: ["React.js", "JavaScript", "CSS"],
-    image: "/projects/movie.webp",
-    github: "https://github.com/sohaehrari/movie-watchlist",
-    live: "https://movie-watchlist-beta-dusky.vercel.app/",
-  },
-
-  {
-    number: "05",
     title: "Skyora(weather_dashboard)",
     category: "Educational Platform",
     description:"A responsive weather dashboard built with Next.js, featuring real-time weather data, location-based forecasts, user authentication, and a clean, interactive interface for a simple and personalized weather experience.",
@@ -62,18 +43,7 @@ const projects = [
   },
 
 
-  {
-    number: "06",
-    title: "Life_Os",
-    category: "Educational Platform",
-    description:
-      "A responsive educational web application with reusable components and interactive interfaces focused on creating a simple learning experience.",
-    technologies: ["React.js", "JavaScript", "Bootstrap"],
-    image: "/projects/life.webp",
-      github: "https://github.com/sohaehrari/life_os",
-      live: "https://life-os-nine-mauve.vercel.app/",
-    },
-
+ 
 ];
 
 export default function ProjectsPage() {
